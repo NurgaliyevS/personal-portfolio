@@ -1,5 +1,4 @@
 from django.db import models
-from django_resized import ResizedImageField
 
 class Discord_bot(models.Model):
     title = models.CharField(max_length=200)

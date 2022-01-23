@@ -1,0 +1,31 @@
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
+
+
+
+
+
+<div class ="container text-center">
+<h1>Discord Bots</h1>
+    {# Автоматически меняет количество в заголовке количество ботов, если один   #}
+    {# То Bot, если много то Bots   #}
+    <h2>Sabyr created {{ discord_bots.count }} bot{{ discord_bots.count|pluralize }}</h2>
+
+    {% for discord_bot in discord_bots %}
+
+        <a href = "{% url 'discord_bot:detail' discord_bot.id %}">
+            <br>
+            <h2> {{ discord_bot.title }}</h2></a>
+        <a href="{{ discord_bot.url }}">
+        <img src =" {{ discord_bot.image.url }}">
+        <p></p>
+{#        <h5 class="text-danger">{{ discord_bot.date|date:'MMM d Y '|upper }}</h5>#}
+        <h4>{{ discord_bot.description|striptags|truncatechars:50 }}</h4>
+    {% endfor %}
+
+<br>
+<a href = "{% url 'home' %}" class="btn btn-success btn-lg">Home</a>
+<p>
+{% endblock %}
+

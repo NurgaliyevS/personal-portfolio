@@ -1,0 +1,20 @@
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
+
+<h1>{{ discord_bot.title }} </h1>
+
+
+{#<h2>{{ discord_bot.date|date:'F jS Y' }}</h2>#}
+<br>
+    <h4>{{ discord_bot.description|safe }}</h4>
+
+    <div class ="container text-center">
+    <a href = "https://discord.com/api/oauth2/authorize?client_id=931016709572272138&permissions=277025459200&scope=bot" class="btn btn-success btn-lg">Add bot</a>
+        <div class="row justify-content-center my-3">
+            <div
+                    class="col-5">
+    <img src =" {{ discord_bot.image.url }}" class="img-fluid" =>
+                  </div>
+        </div>
+{% endblock %}

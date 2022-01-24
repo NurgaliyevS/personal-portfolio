@@ -10,7 +10,8 @@
     <h4>{{ discord_bot.description|safe }}</h4>
 
     <div class ="container text-center">
-    <a href = "https://discord.com/api/oauth2/authorize?client_id=931016709572272138&permissions=277025459200&scope=bot" class="btn btn-success btn-lg">Add bot</a>
+    <a href = {{ discord_bot.link }}
+{#               = "https://discord.com/api/oauth2/authorize?client_id=931016709572272138&permissions=277025459200&scope=bot" class="btn btn-success btn-lg">Add bot</a>#}
         <div class="row justify-content-center my-3">
             <div
                     class="col-5">
